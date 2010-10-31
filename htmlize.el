@@ -1317,6 +1317,7 @@ it's called with the same value of KEY.  All other times, the cached
 
 (defun htmlize-css-insert-head (buffer-faces face-map)
   (insert "    <style type=\"text/css\">\n    <!--\n")
+  (insert "      pre { font-family: Monaco, Courier; }\n")
   (insert "      body {\n        "
 	  (mapconcat #'identity
 		     (htmlize-css-specs (gethash 'default face-map))
